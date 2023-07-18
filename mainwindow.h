@@ -19,12 +19,19 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     void choseNumber();
-    bool checkValue(int x, int y);
+    void checkValue(int x, int y);
     void eliminate(int x, int y, int num);
     void eliminate_x(int y, int num);
     void eliminate_y(int x, int num);
     void eliminate_square(int x, int y, int num);
     void display();
+    void solve();
+    void solve_x(bool &flag, int x);
+    void solve_y(bool &flag, int y);
+    void solve_square(bool &flag, int xx, int yy);
+    void fillOne(int x, int y, int num);
+    void fillAllValues();
+    void clearValues();
 
 private slots:
 
@@ -209,3 +216,4 @@ struct Field{
     bool disp;
 };
 #endif // MAINWINDOW_H
+
